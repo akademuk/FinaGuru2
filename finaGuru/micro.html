@@ -77,7 +77,35 @@
                         <input type="range" id="valueDate" min="2" max="30" value="0" oninput="rangeMoney()">
                     </div>
                 </div>
-                <form action="pay.html" class="calcResult">
+                <form action="pay.php" method="POST" class="calcResult">
+
+                    <div class="rangeSliderRightContainer">
+                        <div class="sliderMoney">
+                            <div class="sliderContainerText">
+                                <p>Сума позики</p>
+                                <div id="innerMoney">0</div>
+                            </div>
+                            <div class="innerBorder">
+                                <p>від 500,00 грн.</p>
+                                <p>до 15 000,00 грн.</p>
+                            </div>
+                            <input type="range" id="valueMoney" name="valueMoney" min="500" max="15000" value="0"
+                                step="100" oninput="rangeMoney()">
+                        </div>
+                        <div class="sliderDate">
+                            <div class="sliderContainerText">
+                                <p>Срок платежу</p>
+                                <div id="innerDate">0</div>
+                            </div>
+                            <div class="innerBorder">
+                                <p>від 2 днів</p>
+                                <p>до 30 днів</p>
+                            </div>
+                            <input type="range" id="valueDate" name="valueDate" min="2" max="30" value="0"
+                                oninput="rangeMoney()">
+                        </div>
+                    </div>
+
                     <input type="submit" class="calcResultBtn" value="Отримати гроші">
                     <a href="#" class="promo">Є промокод?</a>
                     <div class="containerCalc">
@@ -91,6 +119,7 @@
                         <div class="calcResultProcent">
                             <p>Відсотки:</p>
                             <p id="resultPercent"></p>
+                            <!--<input type="text" id="percent" name="percent" value="" /> -->
                         </div>
                         <div class="calcResultProcent">
                             <p>Дата оплати:</p>
